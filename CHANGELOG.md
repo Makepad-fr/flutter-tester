@@ -1,3 +1,9 @@
+## [0.2.0] - 2021-07-04
+
+### Removed
+
+- Unnecessary `print` removed
+
 ## [0.2.0-rc2] - 2021-07-04
 
 ### Fixed
