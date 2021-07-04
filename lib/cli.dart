@@ -27,7 +27,7 @@ void run(List<String> arguments) {
     if (nep.isNotEmpty) {
       throw Exception('${nep.join(", ")} permissions does not exists');
     }
-    for (var device in (results['devices'] as List<String>)) {
+    for (var device in (results['device'] as List<String>)) {
       if (!p.checkDeviceIdentifier(device)) {
         throw Exception("${results['device']} does not exists on $p devices");
       }
