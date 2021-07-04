@@ -1,7 +1,14 @@
 name: ft
-description: A sample command-line application.
-# version: 1.0.0
-# homepage: https://www.example.com
+description: End to end test runner for Flutter projects ideal for integrating on CI/CD workflows.
+version: 0.1.0-beta
+homepage: https://ft.makepad.io
+repository: https://github.com/Makepad-fr/flutter-tester
+authors:
+  - Makepad Developers <dev@makepd.fr>
+executables:
+  ft: ft
+issue_tracker: https://github.com/Makepad-fr/flutter-tester/issues
+documentation: https://github.com/Makepad-fr/flutter-tester/blob/master/README.md
 
 environment:
   sdk: '>=2.12.4 <3.0.0'
