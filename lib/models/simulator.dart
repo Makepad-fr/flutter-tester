@@ -10,16 +10,18 @@ class Simulator {
   final List<String> permissions;
   final bool headless;
   final String name;
+  final String deviceIdentifier;
   late String _id;
 
   Simulator(
       {required this.platform,
       required this.os,
+      required this.deviceIdentifier,
       required this.permissions,
       required this.headless,
       required this.name}) {
-    _id = platform.prepareApp(platform.getBundleName(), os, permissions,
-        headless, name, platform.getBundleName());
+    _id = platform.prepareApp(deviceIdentifier, os, permissions, headless, name,
+        platform.getBundleName());
   }
 
   void runTests(String fileName, bool record) {
