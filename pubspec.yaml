@@ -1,6 +1,6 @@
 name: ft
 description: End to end test runner for Flutter projects ideal for integrating on CI/CD workflows.
-version: 0.1.0
+version: 0.2.0-rc1
 homepage: https://ft.makepad.io
 repository: https://github.com/Makepad-fr/flutter-tester
 
