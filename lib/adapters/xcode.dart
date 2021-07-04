@@ -122,7 +122,6 @@ String? bootSimulator(String uid,
     {bool? headless = true,
     String simulatorAppPath =
         '/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/'}) {
-  print('Headless in bootSimulator $headless');
   var boot = run('xcrun', ['simctl', 'boot', uid]);
   while (!_isSimulatorBooted(uid)) {
     continue;
