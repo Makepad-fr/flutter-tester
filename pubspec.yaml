@@ -3,8 +3,7 @@ description: End to end test runner for Flutter projects ideal for integrating o
 version: 0.1.0-beta
 homepage: https://ft.makepad.io
 repository: https://github.com/Makepad-fr/flutter-tester
-authors:
-  - Makepad Developers <dev@makepd.fr>
+
 executables:
   ft: ft
 issue_tracker: https://github.com/Makepad-fr/flutter-tester/issues
