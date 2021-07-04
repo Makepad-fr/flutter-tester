@@ -27,11 +27,15 @@ dart pub global activate ft
 ft --device=<simulator_uid> --platform=<plaform_name>  --permission=<permission> integration_test/<file_name>
 ```
 
+### Headless mode
+
+By default tests will run on headless mode. If you want to disable you can use `--no-headless` flag.
+
 ### Simulator uid
 
 #### For iOS
 
-You can use following simulators
+You can use one or more of following simulators.
 
 ##### iPhone
 
@@ -62,7 +66,27 @@ You can use following simulators
 
 ##### iPad
 
-
+  - **2** `com.apple.CoreSimulator.SimDeviceType.iPad-2`
+  - **retina** `com.apple.CoreSimulator.SimDeviceType.iPad-Retina`
+  - **air** `com.apple.CoreSimulator.SimDeviceType.iPad-Air`
+  - **mini 2** `com.apple.CoreSimulator.SimDeviceType.iPad-mini-2`
+  - **mini 3** `com.apple.CoreSimulator.SimDeviceType.iPad-mini-3`
+  - **mini 4** `com.apple.CoreSimulator.SimDeviceType.iPad-mini-4`
+  - **air 2** `com.apple.CoreSimulator.SimDeviceType.iPad-Air-2`
+  - **pro 9.7** `com.apple.CoreSimulator.SimDeviceType.iPad-Pro--9-7-inch-`
+  - **pro 12.9** `com.apple.CoreSimulator.SimDeviceType.iPad-Pro`
+  - **5th gen** `com.apple.CoreSimulator.SimDeviceType.iPad--5th-generation-`
+  - **pro 12.9 2nd gen** `com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---2nd-generation-`
+  - **pro 10.5** `com.apple.CoreSimulator.SimDeviceType.iPad-Pro--10-5-inch-`
+  - **6th gen** `com.apple.CoreSimulator.SimDeviceType.iPad--6th-generation-`
+  - **7th gen** `com.apple.CoreSimulator.SimDeviceType.iPad--7th-generation-`
+  - **8th gen** `com.apple.CoreSimulator.SimDeviceType.iPad--8th-generation-`
+  - **pro 11** `com.apple.CoreSimulator.SimDeviceType.iPad-Pro--11-inch-`
+  - **pro 12.9 3rd gen** `com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---3rd-generation-`
+  - **pro 11 2nd gen** `com.apple.CoreSimulator.SimDeviceType.iPad-Pro--11-inch---2nd-generation-`
+  - **pro 12.9 4th gen** `com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---4th-generation-`
+  - **mini 5th gen** `com.apple.CoreSimulator.SimDeviceType.iPad-mini--5th-generation-`
+  - **air 3rd gen** `com.apple.CoreSimulator.SimDeviceType.iPad-Air--3rd-generation-`
 
 
 ### Permissions 
