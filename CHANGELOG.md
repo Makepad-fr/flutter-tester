@@ -1,3 +1,9 @@
+## [0.2.0-rc2] - 2021-07-04
+
+### Fixed
+
+- Simulator creation issue fixed
+
 ## [0.2.0-rc1] - 2021-07-04
 
 ### Fixed
