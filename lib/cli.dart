@@ -27,8 +27,10 @@ void run(List<String> arguments) {
     if (nep.isNotEmpty) {
       throw Exception('${nep.join(", ")} permissions does not exists');
     }
-    if (!p.checkDeviceIdentifier(results['device'])) {
-      throw Exception("${results['device']} does not exists on $p devices");
+    for (var device in (results['devices'] as List<String>)) {
+      if (!p.checkDeviceIdentifier(device)) {
+        throw Exception("${results['device']} does not exists on $p devices");
+      }
     }
 
     var simulator = Simulator(
