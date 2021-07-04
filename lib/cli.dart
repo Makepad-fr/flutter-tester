@@ -27,20 +27,24 @@ void run(List<String> arguments) {
     if (nep.isNotEmpty) {
       throw Exception('${nep.join(", ")} permissions does not exists');
     }
-    if (!p.checkDeviceIdentifier(results['device'])) {
-      throw Exception("${results['device']} does not exists on $p devices");
+    for (var device in (results['device'] as List<String>)) {
+      if (!p.checkDeviceIdentifier(device)) {
+        throw Exception("${results['device']} does not exists on $p devices");
+      }
     }
-
-    var simulator = Simulator(
-        permissions: results['permission'],
-        os: p.getDefaultRuntime(),
-        headless: results['headless'],
-        name: 'ft-simulator',
-        platform: p);
-    for (var testFile in results.rest) {
-      simulator.runTests(testFile, results['record']);
+    for (var device in (results['device'] as List<String>)) {
+      var simulator = Simulator(
+          deviceIdentifier: device,
+          permissions: results['permission'],
+          os: p.getDefaultRuntime(),
+          headless: results['headless'],
+          name: 'ft-simulator',
+          platform: p);
+      for (var testFile in results.rest) {
+        simulator.runTests(testFile, results['record']);
+      }
+      simulator.cleanUp();
     }
-    simulator.cleanUp();
   } on FormatException catch (e) {
     error(e.message);
   }
