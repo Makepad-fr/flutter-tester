@@ -1,3 +1,9 @@
+## [0.2.1] - 2021-08-09
+
+### Changed
+
+- Shell helper runner returns the `stderr` if an error happens
+
 ## [0.2.0] - 2021-07-04
 
 ### Removed
