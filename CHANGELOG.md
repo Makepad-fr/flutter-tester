@@ -1,3 +1,9 @@
+## [0.2.2] - 2021-08-10
+
+### Fixed
+
+- iOS bundle name issue fixed. The default bundle name will be Info-Debug.plist if Info.plist file does not exists
+
 ## [0.2.1] - 2021-08-09
 
 ### Changed
