@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:ft/adapters/fs.dart';
 import 'package:ft/adapters/xcode.dart' as xcode;
 import 'package:ft/adapters/xcode.dart';
@@ -84,6 +86,9 @@ extension Verifier on Platform {
     switch (this) {
       case Platform.ios:
         bundlePath = 'ios/Runner/Info.plist';
+        if (!File(bundlePath).existsSync()) {
+          bundlePath = 'ios/Runner/Info-Debug.plist';
+        }
         break;
       default:
         throw PlatformNotImplementedException(this);

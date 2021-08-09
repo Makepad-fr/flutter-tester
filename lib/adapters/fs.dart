@@ -53,6 +53,9 @@ String? getBundleName({Platform platform = Platform.ios}) {
   switch (platform) {
     case Platform.ios:
       bundlePath = 'ios/Runner/Info.plist';
+      if (!File(bundlePath).existsSync()) {
+        bundlePath = 'ios/Runner/Info-Debug.plist';
+      }
       break;
     default:
       throw PlatformNotImplementedException(platform);
