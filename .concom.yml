@@ -1,3 +1,4 @@
+configfilepath: /Users/kaanyagci/Documents/makepad/hfd/.concom.yml
 path: /Users/kaanyagci/Documents/makepad/hfd
 version: 0.0.1
 scopes:
@@ -13,6 +14,8 @@ scopes:
       description: All changes related to the Dart scripts
     - name: struct
       description: All changes related to the structs of code
+    - name: adapters
+      description: All changes related to adapters
 conventions:
     - name: build
       description: Changes that affect the build system or external dependencies
